@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STAR BELL CAMAS BOX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+    }
+
+    .product-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background: #128C7E;
+      transform: scale(1.05);
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .testimonial-card {
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card {
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Cabeçalho -->
+  <header class="gradient-bg text-white shadow-lg">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-35 h-28">
+            <img src="imagens/logo.png" alt="logo" class="h-full object-contain">
+          </div>
+          <h1 class="text-2xl font-bold"></h1>
+        </div>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#products" class="text-white hover:text-blue-200 transition-colors">Produtos</a>
+          <a href="#benefits" class="text-white hover:text-blue-200 transition-colors">Beneficios</a>
+          <a href="#testimonials" class="text-white hover:text-blue-200 transition-colors">Avaliações no google</a>
+          <a href="#contact" class="text-white hover:text-blue-200 transition-colors">Contato</a>
+          <a href="#faq" class="text-white hover:text-blue-200 transition-colors">Perguntas</a>
+        </nav>
+        <button
+          onclick="openWhatsApp('Olá! Vim pelo site e gostaria de saber mais informações sobre suas camas e colchões.')"
+          class="whatsapp-btn text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2">
+          <span>📱</span>
+          <span>Fale Conosco</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+<!-- Container com as duas mensagens lado a lado -->
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-6">
+
+  <!-- Mensagem Pulsante -->
+  <div class="text-lg font-bold bg-yellow-400 text-blue-900 px-5 py-3 rounded-lg animate-pulse text-center">
+    Compre diretamente pelo WhatsApp e efetue o pagamento na entrega.<br>
+    Ou visite nossa loja física para realizar sua compra.
+  </div>
+
+  <!-- Aviso de Atenção -->
+  <div class="text-lg font-bold bg-red-600 text-yellow-300 px-5 py-3 rounded-lg animate-pulse text-center">
+    ⚠ Atenção: Evite golpes! A Star Bell não pede adiantamento para compras online.<br>
+    Você paga somente quando recebe seu produto. ⚠
+  </div>
+
+</div>
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">A Cama Que Você Merece Está Aqui!</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Temos modelos ideais para seu próprio conforto,<br>hotéis, chácaras,
+        quarto de visitas.<br>
+        Atendimento que te escuta e entrega sem enrolação.</p>
+
+      <button onclick="scrollToProducts()"
+        class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors">
+        Ver Produtos
+      </button>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-16">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossos Produtos</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Product 1 -->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/cama.png" alt="Cama Box Casal Conjugada" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Cama Box Conjugada Casal</h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Colchão 10cm espuma D28.<br>Ideal para
+              quem procura:<br> custo
+              beneficio,Quarto de visitas, chacarás ou hotéis.</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica1')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica1" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> Conjugado </li>
+                <li><strong>Tipo:</strong> Peça única (colchão + base acoplada ) "não separa"</li>
+                <li><strong>Dimensões totais:</strong> 188cm (C) x 138cm (L) x 50cm (A)</li>
+                <li><strong>Espuma:</strong> 10cm altura D28 – firme e confortável</li>
+                <li><strong>Conforto:</strong> Médio-firme</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 95kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Vire a cama a cada <span class="font-semibold">30 dias</span> (invertendo cabeceira com pé) para
+                      maior durabilidade da espuma.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 95kg por
+                        pessoa</span>.</li>
+
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio, com custo-benefício</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Praticidade — não precisa comprar colchão separado</li>
+                <li>Economia de espaço</li>
+                <li>Excelente para quem busca conforto e simplicidade</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 5x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 530,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de saber mais sobre a Cama Box Casal Conjugada.')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora
+            </button>
+          </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-indigo-100 to-indigo-200 flex items-center justify-center">
+            <img src="imagens/conj-sol.png" alt="Cama Box solteiro Conjugada" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Cama Box conjugada solteiro</h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Colchão 10cm espuma D28.<br> Ideal para
+              quem procura:<br>
+              custo beneficio,Quarto de visitas, chacarás ou hotéis.</p>
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica2')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica2" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> Conjugado </li>
+                <li><strong>Tipo:</strong> Peça única (colchão + base acoplada ) "não separa"</li>
+                <li><strong>Dimensões totais:</strong> 188cm (C) x 88cm (L) x 50cm (A)</li>
+                <li><strong>Espuma:</strong> 10cm altura D28 – firme e confortável</li>
+                <li><strong>Conforto:</strong> Médio-firme</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 95kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Vire a cama a cada <span class="font-semibold">30 dias</span> (invertendo cabeceira com pé) para
+                      maior durabilidade da espuma.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 95kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio, com custo-benefício</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Praticidade — não precisa comprar colchão separado</li>
+                <li>Economia de espaço</li>
+                <li>Excelente para quem busca conforto e simplicidade</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 5x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 470,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button
+              onclick="openWhatsApp('Olá vim pelo site e gostaria de saber mais sobre a Cama Box Solteiro Conjugada.')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora
+            </button>
+          </div>
+        </div>
+        <!-- Product 3-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/base-casal-cinza.png" alt="Cama Box Casal Conjugada" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Base box Casal</h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
+              urgência, pronta-entrega, praticidade, solução.</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica3')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica3" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> BASE BOX </li>
+                <li><strong>Tipo:</strong> Peça única (somente o box sem colchão)</li>
+                <li><strong>Dimensões totais:</strong> 188cm (C) x 138cm (L) x 38cm (A)</li>
+                <li><strong>Cores:</strong>Preto, marron, bege, cinza, vermelho</li>
+                <li><strong>Espuma:</strong> Não</li>
+                <li><strong>Molas:</strong> Não</li>
+                <li><strong>Conforto:</strong> Não</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 100kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 100kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Praticidade </li>
+                <li>Design versátil </li>
+                <li>Firmeza e sustentação</li>
+                <li>Compatível com qualquer colchão (do mesmo tamanho)</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 5x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 390,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar a BASE BOX CASAL.')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora
+            </button>
+          </div>
+        </div>
+        <!-- Product 4-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/base-sol-bege.png" alt="Base Box solteiro" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Base box solteiro</h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
+              praticidade, economia, leveza, firmeza e simplicidade</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica4')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica4" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> BASE BOX </li>
+                <li><strong>Tipo:</strong> Peça única (somente o box sem colchão)</li>
+                <li><strong>Dimensões totais:</strong> 188cm (C) x 88cm (L) x 37cm (A)</li>
+                <li><strong>Cores:</strong>Preto, marron, bege, cinza, vermelho</li>
+                <li><strong>Espuma:</strong> Não</li>
+                <li><strong>Molas:</strong> Não</li>
+                <li><strong>Conforto:</strong> Não</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 100kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 100kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Praticidade </li>
+                <li>Design versátil </li>
+                <li>Firmeza e sustentação</li>
+                <li>Compatível com qualquer colchão (do mesmo tamanho)</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 5x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 330,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar a BASE BOX SOLTEIRO.')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Product 5-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/queen-preto.png" alt="Cama Box Casal Conjugada" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Base box queen </h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
+              conforto, praticidade, firmeza, espaço e durabilidade.</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica5')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica5" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> BASE BOX </li>
+                <li><strong>Tipo:</strong> 2 Peças de 79cm de largura (não acompanha colchão,<br> não acompanha
+                  cabeceira)</li>
+                <li><strong>Dimensões totais:</strong> 193cm (C) x 158cm (L) x 42cm (A)</li>
+                <li><strong>Cores:</strong>Preto, marron, bege, cinza, vermelho</li>
+                <li><strong>Espuma:</strong> Não</li>
+                <li><strong>Molas:</strong> Não</li>
+                <li><strong>Conforto:</strong> Não</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 100kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 100kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Praticidade </li>
+                <li>Design versátil </li>
+                <li>Firmeza e sustentação</li>
+                <li>Compatível com qualquer colchão (do mesmo tamanho)</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 5x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 660,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar a BASE BOX QUEEN.')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Product 6-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/bau-cinza-casal.png" alt="Cama Box Casal Conjugada" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Box baú casal </h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
+              Conforto, beleza e espaço extra.</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica6')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica6" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> BOX BAÚ </li>
+                <li><strong>Tipo:</strong> PEÇA ÚNICA (não acompanha colchão)</li>
+                <li><strong>Dimensões totais :</strong> 188cm (C) x 138cm (L) x 42cm (A)</li>
+                <li><strong>Cores:</strong>Preto, marron, bege, cinza, vermelho</li>
+                <li><strong>Espuma:</strong> Não</li>
+                <li><strong>Molas:</strong> Não</li>
+                <li><strong>Conforto:</strong> Não</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 100kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 100kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Praticidade </li>
+                <li>Espaço Extra</li>
+                <li>Design versátil </li>
+                <li>Firmeza e sustentação</li>
+                <li>Compatível com qualquer colchão (do mesmo tamanho)</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 5x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 780,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar a BOX BAÚ CASAL.')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora
+            </button>
+          </div>
+        </div>
+
+
+        <!-- Product 7-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/bau-cinza-sol.png" alt="box bau solteiro" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Box baú solteiro </h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
+              Espaço extra, praticidade, custo-benefício .</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica7')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica7" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> BOX BAÚ </li>
+                <li><strong>Tipo:</strong> PEÇA ÚNICA (não acompanha colchão)</li>
+                <li><strong>Dimensões totais :</strong> 188cm (C) x 88cm (L) x 42cm (A)</li>
+                <li><strong>Cores:</strong>Preto, marron, bege, cinza, vermelho</li>
+                <li><strong>Espuma:</strong> Não</li>
+                <li><strong>Molas:</strong> Não</li>
+                <li><strong>Conforto:</strong> Não</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 100kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 100kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Praticidade </li>
+                <li>Espaço Extra</li>
+                <li>Design versátil </li>
+                <li>Firmeza e sustentação</li>
+                <li>Compatível com qualquer colchão (do mesmo tamanho)</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 5x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 680,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar a BOX BAÚ SOLTEIRO.')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 8-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/bau-queen.png" alt="box bau solteiro" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Box baú queen </h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
+              Espaço extra, praticidade, custo-benefício .</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica8')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica8" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> BOX BAÚ </li>
+                <li><strong>Tipo:</strong> PEÇA ÚNICA (não acompanha colchão)</li>
+                <li><strong>Dimensões totais:</strong> 188cm (C) x 88cm (L) x 42cm (A)</li>
+                <li><strong>Cores:</strong>Preto, marron, bege, cinza, vermelho</li>
+                <li><strong>Espuma:</strong> Não</li>
+                <li><strong>Molas:</strong> Não</li>
+                <li><strong>Conforto:</strong> Não</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 100kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 100kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Praticidade </li>
+                <li>Espaço Extra</li>
+                <li>Design versátil </li>
+                <li>Firmeza e sustentação</li>
+                <li>Compatível com qualquer colchão (do mesmo tamanho)</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 10x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 1.380,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar a BOX BAÚ QUEEN')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora
+            </button>
+          </div>
+        </div>
+
+
+
+        <!-- Product 9-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/mile-d33.png" alt="box bau solteiro" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Colchão Casal Mileniun D33 </h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>COLCHÃO + BOX<BR> Ideal para quem
+              procura:<br>
+              Colchão firme, durabilidade, qualidade, entrega rápida .</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica9')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica9" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> COLCHÃO D33 </li>
+                <li><strong>Tipo:</strong>1 Colchão espuma d33 19cm altura com eps para maior durabilidade.<br> 1 base
+                  box
+                  casal. <br>(não acompanha cabeceira)</li>
+                <li><strong>Dimensões totais:</strong> 188cm (C) x 138cm (L) x 54cm (A)</li>
+                <li><strong>Cores:</strong>Marron</li>
+                <li><strong>Espuma:</strong> D33</li>
+                <li><strong>Molas:</strong> Não</li>
+                <li><strong>Conforto:</strong> firme</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 120kg por pessoa</li>
+                <li><strong>Garantia:</strong> 12 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 100kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Ortopedico </li>
+                <li>firmeza </li>
+                <li>Excelente para quem busca colchão firme</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 10x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 1.120,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de saber mais sobre o colchão Mileniun')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 10-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/nivus.png" alt="box bau solteiro" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Colchão casal nivus (molas pocket) </h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>COLCHÃO + BOX<BR> Ideal para quem
+              procura:<br>
+              Colchão macio, durabilidade, qualidade, entrega rápida .</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica10')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica10" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> COLCHÃO MOLAS POCKET </li>
+                <li><strong>Tipo:</strong> 1 Colchão molas 33CM altura para maior conforto.<br> 1 base box casal.
+                  <br>(não
+                  acompanha cabeceira)
+                </li>
+                <li><strong>Dimensões totais:</strong> 188cm (C) x 138cm (L) x 65cm (A)</li>
+                <li><strong>Cores:</strong>Marron</li>
+                <li><strong>Espuma:</strong> D28</li>
+                <li><strong>Molas:</strong> Enscadas individualmente. 201 molas por m²</li>
+                <li><strong>Conforto:</strong> Macio, com pillow top hyper gel</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 140kg por pessoa</li>
+                <li><strong>Garantia:</strong> 12 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Vire a cama a cada <span class="font-semibold">30 dias</span> (invertendo cabeceira com pé) para
+                      maior durabilidade da espuma.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 95kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Conforto que se molda ao corpo </li>
+                <li>Durabilidade que mantém a firmeza</li>
+                <li>Movimentos sem incomodar o parceiro</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 10x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 1.470,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar o Colchão casal nivus')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora <br>
+            </button>
+
+
+          </div>
+        </div>
+
+        <!-- Product 11-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/barcelona-queen.png" alt="box bau solteiro" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Colchão queen barcelona (molas pocket) </h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>COLCHÃO + BOX<BR> Ideal para quem
+              procura:<br>
+              Colchão macio, mais espaço, qualidade, entrega rápida .</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica11')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica11" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> COLCHÃO MOLAS POCKET </li>
+                <li><strong>Tipo:</strong> 1 Colchão molas 30CM altura para maior conforto e mais espaço.<br> 2 base box
+                  de 79cm largura. <br>(não
+                  acompanha cabeceira)</li>
+                <li><strong>Dimensões totais:</strong> 193cm (C) x 158cm (L) x 65cm (A)</li>
+                <li><strong>Cores:</strong> Marron</li>
+                <li><strong>Espuma:</strong> D26</li>
+                <li><strong>Molas:</strong> Enscadas individualmente. 201 molas por m²</li>
+                <li><strong>Conforto:</strong> Macio, com HYPER GEL</li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Tecido antiderrapante, antialérgico e antiácaro</li>
+                <li><strong>Peso Suportado:</strong> Até 120kg por pessoa</li>
+                <li><strong>Garantia:</strong> 12 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Não arraste a cama para trocar de lugar; isso pode danificar os pezinhos dependendo do
+                      nivelamento do piso. <span class="font-semibold">(Para mover a cama, levante-a. São necessárias
+                        duas pessoas.)</span></li>
+                    <li>Não pule ou se jogue sobre a cama — isso caracteriza mau uso e pode invalidar a garantia.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Vire a cama a cada <span class="font-semibold">30 dias</span> (invertendo cabeceira com pé) para
+                      maior durabilidade da espuma.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                    <li>Evite colocar animais de estimação sobre a cama para preservar o tecido e evitar odores.</li>
+                    <li>Não ultrapasse o peso máximo recomendado: <span class="font-semibold">até 95kg por
+                        pessoa</span>.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Conforto que se molda ao corpo </li>
+                <li>Durabilidade que mantém a firmeza</li>
+                <li>Movimentos sem incomodar o parceiro</li>
+                <li>maior espaço</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 10x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 1.970,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar o Colchão queen barcelona')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora <br>
+            </button>
+
+
+          </div>
+        </div>
+
+        <!-- Product 12-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/cabeceira-bege-casal.png" alt="box bau solteiro" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Cabeceira casal </h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem
+              procura:<br>
+              Estilo, conforto, qualidade, entrega rápida .</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica12')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica12" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> Cabeceira</li>
+                <li><strong>Tipo:</strong> 1 cabeceira (peça unica)</li>
+                <li><strong>Dimensões totais:</strong>138cm (L) x 120cm (A)</li>
+                <li><strong>Cores:</strong> Marron, Bege, preto, cinza, vermelho</li>
+                <li><strong>Espuma:</strong> D26</li>
+                <li><strong>Molas:</strong> Não</li>
+                <li><strong>Conforto:</strong> Macio </li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Suede </li>
+                <li><strong>Peso Suportado:</strong> Até 120kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Conforto </li>
+                <li>Durabilidade </li>
+                <li>Estilo</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 5x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 290,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar a cabeceira de casal.')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora <br>
+            </button>
+
+
+          </div>
+        </div>
+
+        <!-- Product 13-->
+        <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+            <img src="imagens/cabeceira-preta-queen.png" alt="box bau solteiro" class="h-full object-contain">
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2">Cabeceira queen </h4>
+            <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem
+              procura:<br>
+              Estilo, conforto, qualidade, entrega rápida .</p>
+
+            <!-- Botão para mostrar/ocultar -->
+            <button onclick="toggleFicha('fichaTecnica13')"
+              class="mt-4 mb-2 px-6 py-2 bg-blue-800 text-white rounded-full font-semibold shadow hover:bg-blue-700 transition">
+              Ver Ficha Técnica
+            </button>
+
+
+            <!-- Ficha Técnica oculta por padrão -->
+            <section id="fichaTecnica13" class="bg-white rounded-xl shadow-lg p-6 max-w-3xl mx-auto mt-4 hidden">
+              <h2 class="text-2xl font-bold text-blue-900 mb-4">Ficha Técnica: </h2>
+
+              <ul class="space-y-2 text-gray-700">
+                <li><strong>Modelo:</strong> Cabeceira</li>
+                <li><strong>Tipo:</strong> 1 cabeceira (peça unica)</li>
+                <li><strong>Dimensões totais:</strong>158cm (L) x 120cm (A)</li>
+                <li><strong>Cores:</strong> Marron, Bege, preto, cinza, vermelho</li>
+                <li><strong>Espuma:</strong> D26</li>
+                <li><strong>Molas:</strong> Não</li>
+                <li><strong>Conforto:</strong> Macio </li>
+                <li><strong>Estrutura:</strong> Madeira de reflorestamento, tratada e resistente</li>
+                <li><strong>Revestimento:</strong> Suede </li>
+                <li><strong>Peso Suportado:</strong> Até 120kg por pessoa</li>
+                <li><strong>Garantia:</strong> 3 meses contra defeitos de fabricação</li>
+                <p class="text-xs text-gray-500 mt-2">
+                  *A garantia não cobre danos causados por mau uso, como excesso de peso, impactos ou uso fora das
+                  recomendações do fabricante.
+                </p>
+                <div
+                  class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-900 p-4 rounded-lg mt-6 max-w-3xl mx-auto">
+                  <h3 class="text-lg font-semibold mb-2">🔧 Recomendação de Uso:</h3>
+                  <ul class="list-disc list-inside text-sm space-y-1">
+                    <li>Evite impactos, excesso de peso e umidade.</li>
+                    <li>Evite expor ao sol direto ou calor excessivo, pois isso pode deformar a espuma e o tecido.</li>
+                    <li>Mantenha o ambiente limpo e seco para evitar mofo e proliferação de ácaros.</li>
+                    <li>Não utilize produtos de limpeza abrasivos ou alvejantes no tecido. Limpe com pano úmido.</li>
+                  </ul>
+                </div>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Indicação de uso:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Uso próprio</li>
+                <li>Quarto de visitas</li>
+                <li>Chácaras e sítios</li>
+                <li>Hotéis e pousadas</li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Diferenciais:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>Conforto </li>
+                <li>Durabilidade </li>
+                <li>Estilo</li>
+
+              </ul>
+
+              <h3 class="text-xl font-semibold text-blue-800 mt-6 mb-2">Observações:</h3>
+              <ul class="list-disc list-inside text-gray-700">
+                <li>📦 Atendimento Humanizado<br> (sem robôs) </li>
+                <li>🚚 Entrega rápida na sua região</li>
+                <li>💳 Parcelamos no cartão em até 5x SEM JUROS</li>
+              </ul>
+            </section>
+
+            <!-- Script JavaScript -->
+            <script>
+              function toggleFicha(id) {
+                const ficha = document.getElementById(id);
+                ficha.classList.toggle("hidden");
+              }
+            </script>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-2xl font-bold text-purple-600">R$ 460,00</span>
+              <div class="flex text-yellow-400">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+              </div>
+            </div>
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar a cabeceira queen.')"
+              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              Comprar Agora <br>
+            </button>
+
+
+          </div>
+        </div>
+
+
+  </section> <!-- Seção de Benefícios -->
+  <section id="benefits" class="py-16 bg-gray-100"></section>
+  <div class="container mx-auto px-4">
+    <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Por que escolher Star Bell?</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="bg-white p-6 round-xl shadow-md text-center">
+        <div class="text-5xl mb-4 text-blue-600 mx-auto">🛠️</div>
+        <h4 class="text-xl font-semibold mb-2">Qualidade Superior</h4>
+        <p class="text-gray-600">Materiais selecionados e processo de fabricação exigente.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <div class="text-5xl mb-4 text-blue-600 mx-auto">🚚</div>
+        <h4 class="text-xl font-semibold mb-2">Entregamos no mesmo dia! Para produtos em estoque.</h4>
+        <p class="text-gray-600">Entregamos em toda a região com agilidade e segurança.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <div class="text-5xl mb-4 text-blue-600 mx-auto">💰</div>
+        <h4 class="text-xl font-semibold mb-2">Melhor Preço</h4>
+        <p class="text-gray-600">Preços justos e condições de pagamento em até 10x sem juros no cartão.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <div class="text-5xl mb-4 text-blue-600 mx-auto">🛡️</div>
+        <h4 class="text-xl font-semibold mb-2">Garantia</h4>
+        <p class="text-gray-600">Todos os produtos com garantia de fábrica e suporte pós-venda.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Últimas avaliações do google<BR>
+        <div class="flex justify-center items-center mb-12 text-yellow-400 text-xl">
+          5,0 ★★★★★
+          <span class="text-gray-700 text-base ml-2">(21 avaliações)</span>
+        </div>
+      </h3>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+          <div class="flex text-yellow-400">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </div>
+          <p class="text-gray-600 mb-4">Gostaria de Parabenizar pelo atendimento, entrega super rápida fiz o pedido
+            umas 12:00 e duas horas depois já foi entregue, qualidade muito boa , chegou tudo certinho obrigada a
+            vendedora Yara que foi super atenciosa 🙏👍</p>
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+              <span class="text-blue-600 font-bold">R</span>
+            </div>
+            <div>
+              <h5 class="font-semibold">Rosimeire Paulino</h5>
+              <p class="text-sm text-gray-500">06/08/2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+          <div class="flex text-yellow-400">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </div>
+
+          <p class="text-gray-600 mb-4">Muito boas as camas ótima a qualidade e bom preço</p>
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+              <span class="text-blue-600 font-bold">C</span>
+            </div>
+            <div>
+              <h5 class="font-semibold">Carlos Roberto</h5>
+              <p class="text-sm text-gray-500">05/08/2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+          <div class="flex text-yellow-400">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+          </div>
+
+
+          <p class="text-gray-600 mb-4">Gente adorei minha compra ,na loja Star Bell.
+            Segunda vez que compro, vendedora ótima muito educada, prestativa.
+            O moço que veio entregar, muito gente boa também, vcs estão de parabéns super indico entrega rápida, e
+            produtos de qualidade. 🥰</p>
+          <div class="flex items-center">
+            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+              <span class="text-blue-600 font-bold">S</span>
+            </div>
+            <div>
+              <h5 class="font-semibold">Silvelena Aparecida</h5>
+              <p class="text-sm text-gray-500">18/07/2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Seção Contato -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800"></h3>
+      <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="p-8 text-white gradient-bg text-center">
+          <h4 class="text-2xl font-bold mb-6">Informações de Contato</h4>
+          <div class="space-y-6 text-lg">
+
+            <div>
+              <span class="text-2xl block">📍</span>
+              <h5 class="font-semibold">Endereço</h5>
+              <p>Rua Henrique Cabral De Vasconcelos, 2109 - Jardim Progresso (D.E.R)</p>
+              <p>São João da Boa Vista - SP</p>
+            </div>
+
+            <div>
+              <span class="text-2xl block">📱</span>
+              <h5 class="font-semibold">WhatsApp</h5>
+              <p>(19) 2080-0588</p>
+            </div>
+
+            <div>
+              <span class="text-2xl block">⏰</span>
+              <h5 class="font-semibold">Horário de Funcionamento</h5>
+              <p>Segunda a Sexta: 9h às 18h</p>
+              <p>Sábado: 9h às 16h</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="faq" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">❓ Dúvidas Frequentes</h3>
+
+      <div class="space-y-6 max-w-3xl mx-auto">
+
+        <!-- Pergunta 1 -->
+        <details class="bg-gray-100 p-4 rounded-lg shadow">
+          <summary class="font-semibold cursor-pointer">Qual o prazo de entrega?</summary>
+          <p class="mt-2 text-gray-700">Para produtos em estoque, fazemos a entrega no mesmo dia na região. Para outras
+            localidades, o prazo será informado no momento da compra.</p>
+        </details>
+
+        <!-- Pergunta 2 -->
+        <details class="bg-gray-100 p-4 rounded-lg shadow">
+          <summary class="font-semibold cursor-pointer">Vocês montam a cama no local?</summary>
+          <p class="mt-2 text-gray-700">Sim, nossos entregadores fazem a montagem básica no ato da entrega, sem custo
+            adicional.</p>
+        </details>
+
+        <!-- Pergunta 3 -->
+        <details class="bg-gray-100 p-4 rounded-lg shadow">
+          <summary class="font-semibold cursor-pointer">Qual o peso máximo suportado?</summary>
+          <p class="mt-2 text-gray-700">O peso varia conforme o modelo. Por exemplo, camas conjugadas suportam até 95kg
+            por pessoa, enquanto modelos de molas suportam até 140kg por pessoa.</p>
+        </details>
+
+        <!-- Pergunta 4 -->
+        <details class="bg-gray-100 p-4 rounded-lg shadow">
+          <summary class="font-semibold cursor-pointer">Vocês fazem entrega fora da cidade?</summary>
+          <p class="mt-2 text-gray-700">Sim, fazemos entregas em cidades próximas. Consulte o valor do frete no momento
+            da compra.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+  <!-- Rodapé -->
+  <footer class="gradient-bg text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center space-x-15 mb-4">
+            <div class="flex items-center space-x-15 mb-15">
+              <img src="imagens/logo.png" alt="logo" class="h-10 object-contain">
+            </div>
+            <h4 class="text-xl font-bold"></h4>
+          </div>
+          <p class="text-blue-100">Qualidade e conforto para seu descanso. Proporcionando noites de sono
+            perfeitas.</p>
+        </div>
+        <div>
+          <h5 class="font-semibold text-lg mb-4">Links Rápidos</h5>
+          <ul class="space-y-2">
+            <li><a href="#products" class="text-blue-100 hover:text-white transition-colors">Produtos</a>
+            </li>
+            <li><a href="#benefits" class="text-blue-100 hover:texto-branco transição-cores">Benefícios</a>
+            </li>
+            <li><a href="#testimonials" class="texto-azul-100 hover:texto-branco transição-cores">Depoimentos</a></li>
+            <li><a href="#contact" class="texto-azul-100 hover:texto-branco transição-cores">Contato</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-semibold text-lg mb-4">Siga-nos</h5>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 bg-branco bg-opacidade-20 arredondado-cheio flex itens-centro justificar-centro hover:bg-opacidade-30 transição-cores">
+              <span class="texto-xl">📱</span>
+            </a>
+            <a href="#"
+              class="w-10 h-10 bg-branco bg-opacidade-20 arredondado-completo flex itens-centro justificar-centro pairar:bg-opacidade-30 cores-de-transição">
+              <span class="texto-xl">📷</span>
+            </a>
+            <a href="#"
+              class="l-10 h-10 bg-branco bg-opacidade-20 arredondado-completo flex itens-centro justificar-centro pairar:bg-opacity-30 transition-colors">
+              <span class="text-xl">📘</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-blue-400 mt-8 pt-8 text-center text-blue-100">
+        <p>© 2025 Star Bell Camas Box. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Botão flutuante do WhatsApp -->
+  <button onclick="openWhatsApp('Olá! Gostaria de saber mais sobre seus produtos.')"
+    class="floating-whatsapp whatsapp-btn w-16 h-16 rounded-full flex items-center justify-center shadow-lg"> <span
+      class="text-3xl">📱</span>
+  </button>
+  <script>
+    function scrollToProducts() {
+      document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const phone = '551920800588'; // Substitua com seu número
+    const encodedMessage = encodeURIComponent("Olá! Gostaria de saber mais sobre suas camas.");
+    function openWhatsApp(msg) {
+      const url = `https://wa.me/${phone}?text=${encodedMessage}`;
+      window.open(url, '_blank');
+    }
+
+    (function () {
+      function c() {
+        var b = a.contentDocument || a.contentWindow.document;
+        if (b) {
+          var d = b.getElementById('algumElemento');
+          if (d) {
+            d.style.visibility = 'hidden';
+          }
+        }
+      }
+
+      if (document.readyState !== 'loading') {
+        c();
+      } else {
+        document.addEventListener('DOMContentLoaded', c);
+      }
+    })();
+  </script>
+
+</body>
+
+</html>
