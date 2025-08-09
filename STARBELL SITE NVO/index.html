@@ -74,32 +74,50 @@
 
 <body class="bg-gray-50">
 
-  <!-- Cabeçalho -->
-  <header class="gradient-bg text-white shadow-lg">
-    <div class="container mx-auto px-4 py-6">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-3">
-          <div class="w-35 h-28">
-            <img src="imagens/logo.png" alt="logo" class="h-full object-contain">
-          </div>
-          <h1 class="text-2xl font-bold"></h1>
+<!-- Cabeçalho -->
+<header class="gradient-bg text-white shadow-lg">
+  <div class="container mx-auto px-4 py-6">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-35 h-28">
+          <img src="imagens/logo.png" alt="logo" class="h-full object-contain">
         </div>
-        <nav class="hidden md:flex items-center space-x-6">
-          <a href="#products" class="text-white hover:text-blue-200 transition-colors">Produtos</a>
-          <a href="#benefits" class="text-white hover:text-blue-200 transition-colors">Beneficios</a>
-          <a href="#testimonials" class="text-white hover:text-blue-200 transition-colors">Avaliações no google</a>
-          <a href="#contact" class="text-white hover:text-blue-200 transition-colors">Contato</a>
-          <a href="#faq" class="text-white hover:text-blue-200 transition-colors">Perguntas</a>
-        </nav>
-        <button
-          onclick="openWhatsApp('Olá! Vim pelo site e gostaria de saber mais informações sobre suas camas e colchões.')"
-          class="whatsapp-btn text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2">
-          <span>📱</span>
-          <span>Fale Conosco</span>
-        </button>
+        <h1 class="text-2xl font-bold"></h1>
       </div>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="#products" class="text-white hover:text-blue-200 transition-colors">Produtos</a>
+        <a href="#benefits" class="text-white hover:text-blue-200 transition-colors">Beneficios</a>
+        <a href="#testimonials" class="text-white hover:text-blue-200 transition-colors">Avaliações no google</a>
+        <a href="#contact" class="text-white hover:text-blue-200 transition-colors">Contato</a>
+        <a href="#faq" class="text-white hover:text-blue-200 transition-colors">Perguntas</a>
+      </nav>
+
+      <!-- Botão hambúrguer no mobile -->
+      <button class="md:hidden text-white text-3xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        ☰
+      </button>
+
+      <button
+        onclick="openWhatsApp('Olá! Vim pelo site e gostaria de saber mais informações sobre suas camas e colchões.')"
+        class="whatsapp-btn text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2">
+        <span>📱</span>
+        <span>Fale Conosco</span>
+      </button>
     </div>
-  </header>
+
+    <!-- Menu Mobile -->
+    <nav id="mobileMenu" class="hidden flex-col space-y-2 mt-4 md:hidden">
+      <a href="#products" class="text-white">Produtos</a>
+      <a href="#benefits" class="text-white">Beneficios</a>
+      <a href="#testimonials" class="text-white">Avaliações</a>
+      <a href="#contact" class="text-white">Contato</a>
+      <a href="#faq" class="text-white">Perguntas</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Hero Section -->
   <section class="gradient-bg text-white py-16">
