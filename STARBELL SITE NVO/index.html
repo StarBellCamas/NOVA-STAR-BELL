@@ -74,70 +74,72 @@
 
 <body class="bg-gray-50">
 
-<!-- Cabeçalho -->
-<header class="gradient-bg text-white shadow-lg">
-  <div class="container mx-auto px-4 py-6">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <div class="w-35 h-28">
-          <img src="imagens/logo.png" alt="logo" class="h-full object-contain">
+  <!-- Cabeçalho -->
+  <header class="gradient-bg text-white shadow-lg">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-35 h-28">
+            <img src="imagens/logo.png" alt="logo" class="h-full object-contain">
+          </div>
+          <h1 class="text-2xl font-bold"></h1>
         </div>
-        <h1 class="text-2xl font-bold"></h1>
+
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#products" class="text-white hover:text-blue-200 transition-colors">Produtos</a>
+          <a href="#benefits" class="text-white hover:text-blue-200 transition-colors">Beneficios</a>
+          <a href="#testimonials" class="text-white hover:text-blue-200 transition-colors">Avaliações no google</a>
+          <a href="#contact" class="text-white hover:text-blue-200 transition-colors">Contato</a>
+          <a href="#faq" class="text-white hover:text-blue-200 transition-colors">Perguntas</a>
+        </nav>
+
+        <!-- Botão hambúrguer no mobile -->
+        <button class="md:hidden text-white text-3xl"
+          onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          ☰
+        </button>
+
+        <button
+          onclick="openWhatsApp('Olá! Vim pelo site e gostaria de saber mais informações sobre suas camas e colchões.')"
+          class="whatsapp-btn text-white px-6 py-2 rounded-full font-semibold flex items-cent
+        er space-x-2">
+          <span>📱</span>
+          <span>Fale Conosco</span>
+        </button>
       </div>
 
-      <!-- Menu Desktop -->
-      <nav class="hidden md:flex items-center space-x-6">
-        <a href="#products" class="text-white hover:text-blue-200 transition-colors">Produtos</a>
-        <a href="#benefits" class="text-white hover:text-blue-200 transition-colors">Beneficios</a>
-        <a href="#testimonials" class="text-white hover:text-blue-200 transition-colors">Avaliações no google</a>
-        <a href="#contact" class="text-white hover:text-blue-200 transition-colors">Contato</a>
-        <a href="#faq" class="text-white hover:text-blue-200 transition-colors">Perguntas</a>
+      <!-- Menu Mobile -->
+      <nav id="mobileMenu" class="hidden flex-col space-y-2 mt-4 md:hidden">
+        <a href="#products" class="text-white">Produtos</a>
+        <a href="#benefits" class="text-white">Beneficios</a>
+        <a href="#testimonials" class="text-white">Avaliações</a>
+        <a href="#contact" class="text-white">Contato</a>
+        <a href="#faq" class="text-white">Perguntas</a>
       </nav>
-
-      <!-- Botão hambúrguer no mobile -->
-      <button class="md:hidden text-white text-3xl" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-        ☰
-      </button>
-
-      <button
-        onclick="openWhatsApp('Olá! Vim pelo site e gostaria de saber mais informações sobre suas camas e colchões.')"
-        class="whatsapp-btn text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2">
-        <span>📱</span>
-        <span>Fale Conosco</span>
-      </button>
     </div>
-
-    <!-- Menu Mobile -->
-    <nav id="mobileMenu" class="hidden flex-col space-y-2 mt-4 md:hidden">
-      <a href="#products" class="text-white">Produtos</a>
-      <a href="#benefits" class="text-white">Beneficios</a>
-      <a href="#testimonials" class="text-white">Avaliações</a>
-      <a href="#contact" class="text-white">Contato</a>
-      <a href="#faq" class="text-white">Perguntas</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
 
   <!-- Hero Section -->
   <section class="gradient-bg text-white py-16">
     <div class="container mx-auto px-4 text-center">
-<!-- Container com as duas mensagens lado a lado -->
-<div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-6">
+      <!-- Container com as duas mensagens lado a lado -->
+      <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-6">
 
-  <!-- Mensagem Pulsante -->
-  <div class="text-lg font-bold bg-yellow-400 text-blue-900 px-5 py-3 rounded-lg animate-pulse text-center">
-    Compre diretamente pelo WhatsApp e efetue o pagamento na entrega.<br>
-    Ou visite nossa loja física para realizar sua compra.
-  </div>
+        <!-- Mensagem Pulsante -->
+        <div class="text-lg font-bold bg-yellow-400 text-blue-900 px-5 py-3 rounded-lg animate-pulse text-center">
+          Compre diretamente pelo WhatsApp e efetue o pagamento na entrega.<br>
+          Ou visite nossa loja física para realizar sua compra.
+        </div>
 
-  <!-- Aviso de Atenção -->
-  <div class="text-lg font-bold bg-red-600 text-yellow-300 px-5 py-3 rounded-lg animate-pulse text-center">
-    ⚠ Atenção: Evite golpes! A Star Bell não pede adiantamento para compras online.<br>
-    Você paga somente quando recebe seu produto. ⚠
-  </div>
+        <!-- Aviso de Atenção -->
+        <div class="text-lg font-bold bg-red-600 text-yellow-300 px-5 py-3 rounded-lg animate-pulse text-center">
+          ⚠ Atenção: Evite golpes! A Star Bell não pede adiantamento para compras online.<br>
+          Você paga somente quando recebe seu produto. ⚠
+        </div>
 
-</div>
+      </div>
       <h2 class="text-4xl md:text-5xl font-bold mb-6">A Cama Que Você Merece Está Aqui!</h2>
       <p class="text-xl mb-8 max-w-2xl mx-auto">Temos modelos ideais para seu próprio conforto,<br>hotéis, chácaras,
         quarto de visitas.<br>
@@ -162,7 +164,12 @@
             <img src="imagens/cama.png" alt="Cama Box Casal Conjugada" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Cama Box Conjugada Casal</h4>
+            <h4 class="text-xl font-semibold mb-2">Cama Box Conjugada Casal<br>
+              <p class="text-xs font-bold text-black mt-2">
+                (+500 vendidos) 25 disponiveis
+              </p>
+            </h4>
+
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Colchão 10cm espuma D28.<br>Ideal para
               quem procura:<br> custo
               beneficio,Quarto de visitas, chacarás ou hotéis.</p>
@@ -267,7 +274,11 @@
             <img src="imagens/conj-sol.png" alt="Cama Box solteiro Conjugada" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Cama Box conjugada solteiro</h4>
+            <h4 class="text-xl font-semibold mb-2">Cama Box conjugada solteiro <p
+                class="text-xs font-bold text-black mt-2">
+                (+300 vendidos) 12 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Colchão 10cm espuma D28.<br> Ideal para
               quem procura:<br>
               custo beneficio,Quarto de visitas, chacarás ou hotéis.</p>
@@ -370,7 +381,10 @@
             <img src="imagens/base-casal-cinza.png" alt="Cama Box Casal Conjugada" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Base box Casal</h4>
+            <h4 class="text-xl font-semibold mb-2">Base box Casal <p class="text-xs font-bold text-black mt-2">
+                (+200 vendidos) 15 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
               urgência, pronta-entrega, praticidade, solução.</p>
 
@@ -473,7 +487,10 @@
             <img src="imagens/base-sol-bege.png" alt="Base Box solteiro" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Base box solteiro</h4>
+            <h4 class="text-xl font-semibold mb-2">Base box solteiro <p class="text-xs font-bold text-black mt-2">
+                (+200 vendidos) 5 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
               praticidade, economia, leveza, firmeza e simplicidade</p>
 
@@ -578,7 +595,10 @@
             <img src="imagens/queen-preto.png" alt="Cama Box Casal Conjugada" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Base box queen </h4>
+            <h4 class="text-xl font-semibold mb-2">Base box queen <p class="text-xs font-bold text-black mt-2">
+                (+50 vendidos) 2 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
               conforto, praticidade, firmeza, espaço e durabilidade.</p>
 
@@ -685,7 +705,10 @@
             <img src="imagens/bau-cinza-casal.png" alt="Cama Box Casal Conjugada" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Box baú casal </h4>
+            <h4 class="text-xl font-semibold mb-2">Box baú casal <p class="text-xs font-bold text-black mt-2">
+                (+50 vendidos) 3 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
               Conforto, beleza e espaço extra.</p>
 
@@ -792,7 +815,10 @@
             <img src="imagens/bau-cinza-sol.png" alt="box bau solteiro" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Box baú solteiro </h4>
+            <h4 class="text-xl font-semibold mb-2">Box baú solteiro <p class="text-xs font-bold text-black mt-2">
+                (+40 vendidos) 5 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
               Espaço extra, praticidade, custo-benefício .</p>
 
@@ -898,7 +924,10 @@
             <img src="imagens/bau-queen.png" alt="box bau solteiro" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Box baú queen </h4>
+            <h4 class="text-xl font-semibold mb-2">Box baú queen<p class="text-xs font-bold text-black mt-2">
+                (+40 vendidos) 2 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem procura:<br>
               Espaço extra, praticidade, custo-benefício .</p>
 
@@ -1006,7 +1035,11 @@
             <img src="imagens/mile-d33.png" alt="box bau solteiro" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Colchão Casal Mileniun D33 </h4>
+            <h4 class="text-xl font-semibold mb-2">Colchão Casal Mileniun D33 <p
+                class="text-xs font-bold text-black mt-2">
+                (+10 vendidos) 2 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>COLCHÃO + BOX<BR> Ideal para quem
               procura:<br>
               Colchão firme, durabilidade, qualidade, entrega rápida .</p>
@@ -1113,7 +1146,11 @@
             <img src="imagens/nivus.png" alt="box bau solteiro" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Colchão casal nivus (molas pocket) </h4>
+            <h4 class="text-xl font-semibold mb-2">Colchão casal nivus (molas pocket) (INDISPONÍVEL)<p
+                class="text-xs font-bold text-black mt-2">
+                (5 vendidos) 0 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>COLCHÃO + BOX<BR> Ideal para quem
               procura:<br>
               Colchão macio, durabilidade, qualidade, entrega rápida .</p>
@@ -1210,10 +1247,7 @@
                 <span>★</span>
               </div>
             </div>
-            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar o Colchão casal nivus')"
-              class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Comprar Agora <br>
-            </button>
+
 
 
           </div>
@@ -1225,7 +1259,11 @@
             <img src="imagens/barcelona-queen.png" alt="box bau solteiro" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Colchão queen barcelona (molas pocket) </h4>
+            <h4 class="text-xl font-semibold mb-2">Colchão queen barcelona (molas pocket) <p
+                class="text-xs font-bold text-black mt-2">
+                (8 vendidos) 1 disponivel
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>COLCHÃO + BOX<BR> Ideal para quem
               procura:<br>
               Colchão macio, mais espaço, qualidade, entrega rápida .</p>
@@ -1246,7 +1284,7 @@
                 <li><strong>Tipo:</strong> 1 Colchão molas 30CM altura para maior conforto e mais espaço.<br> 2 base box
                   de 79cm largura. <br>(não
                   acompanha cabeceira)</li>
-                <li><strong>Dimensões totais:</strong> 193cm (C) x 158cm (L) x 65cm (A)</li>
+                <li><strong>Dimensões totais:</strong> 198cm (C) x 158cm (L) x 65cm (A)</li>
                 <li><strong>Cores:</strong> Marron</li>
                 <li><strong>Espuma:</strong> D26</li>
                 <li><strong>Molas:</strong> Enscadas individualmente. 201 molas por m²</li>
@@ -1324,7 +1362,7 @@
             </div>
             <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar o Colchão queen barcelona')"
               class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-              Comprar Agora <br>
+              Comprar agora<br>
             </button>
 
 
@@ -1337,7 +1375,10 @@
             <img src="imagens/cabeceira-bege-casal.png" alt="box bau solteiro" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Cabeceira casal </h4>
+            <h4 class="text-xl font-semibold mb-2">Cabeceira casal <p class="text-xs font-bold text-black mt-2">
+                (+100 vendidos) 10 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem
               procura:<br>
               Estilo, conforto, qualidade, entrega rápida .</p>
@@ -1438,7 +1479,10 @@
             <img src="imagens/cabeceira-preta-queen.png" alt="box bau solteiro" class="h-full object-contain">
           </div>
           <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2">Cabeceira queen </h4>
+            <h4 class="text-xl font-semibold mb-2">Cabeceira queen <p class="text-xs font-bold text-black mt-2">
+                (+80 vendidos) 3 disponiveis
+              </p>
+            </h4>
             <p class="text-gray-600 mb-4">*Fotos reais do nossos produtos*<BR>Ideal para quem
               procura:<br>
               Estilo, conforto, qualidade, entrega rápida .</p>
@@ -1568,7 +1612,7 @@
       <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Últimas avaliações do google<BR>
         <div class="flex justify-center items-center mb-12 text-yellow-400 text-xl">
           5,0 ★★★★★
-          <span class="text-gray-700 text-base ml-2">(21 avaliações)</span>
+          <span class="text-gray-700 text-base ml-2">(23 avaliações)</span>
         </div>
       </h3>
 
@@ -1581,64 +1625,89 @@
             <span>★</span>
             <span>★</span>
           </div>
-          <p class="text-gray-600 mb-4">Gostaria de Parabenizar pelo atendimento, entrega super rápida fiz o pedido
-            umas 12:00 e duas horas depois já foi entregue, qualidade muito boa , chegou tudo certinho obrigada a
-            vendedora Yara que foi super atenciosa 🙏👍</p>
-          <div class="flex items-center">
-            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-              <span class="text-blue-600 font-bold">R</span>
-            </div>
-            <div>
-              <h5 class="font-semibold">Rosimeire Paulino</h5>
-              <p class="text-sm text-gray-500">06/08/2025</p>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
-          <div class="flex text-yellow-400">
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-          </div>
 
-          <p class="text-gray-600 mb-4">Muito boas as camas ótima a qualidade e bom preço</p>
-          <div class="flex items-center">
-            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-              <span class="text-blue-600 font-bold">C</span>
-            </div>
-            <div>
-              <h5 class="font-semibold">Carlos Roberto</h5>
-              <p class="text-sm text-gray-500">05/08/2025</p>
-            </div>
+          <p class="text-gray-600 mb-4">Ola 😃
+Eu só tenho que agradecer .Yara pelo seu atendimento excelente muito atenciosa e seu entregador também muito caprichoso excelente equipe da Star Bell Camas Box.
+Deus abençoe 🙏 muito obrigado</p>
+        <div class="flex items-center">
+          <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+            <span class="text-blue-600 font-bold">I</span>
           </div>
-        </div>
-        <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
-          <div class="flex text-yellow-400">
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-          </div>
-
-
-          <p class="text-gray-600 mb-4">Gente adorei minha compra ,na loja Star Bell.
-            Segunda vez que compro, vendedora ótima muito educada, prestativa.
-            O moço que veio entregar, muito gente boa também, vcs estão de parabéns super indico entrega rápida, e
-            produtos de qualidade. 🥰</p>
-          <div class="flex items-center">
-            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-              <span class="text-blue-600 font-bold">S</span>
-            </div>
-            <div>
-              <h5 class="font-semibold">Silvelena Aparecida</h5>
-              <p class="text-sm text-gray-500">18/07/2025</p>
-            </div>
+          <div>
+            <h5 class="font-semibold">Isabel de Fatima da Silva dos Santos Santos</h5>
+            <p class="text-sm text-gray-500">11/08/2025</p>
           </div>
         </div>
       </div>
+      <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+        <div class="flex text-yellow-400">
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+        </div>
+
+        <p class="text-gray-600 mb-4">Ameiiiii!!!! a cama é perfeita!!! Atendimento excelente
+          entrega super rápida , parabéns super indico 👏👏👏👏👏👏</p>
+        <div class="flex items-center">
+          <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+            <span class="text-blue-600 font-bold">S</span>
+          </div>
+          <div>
+            <h5 class="font-semibold">Silvana Piza</h5>
+            <p class="text-sm text-gray-500">11/08/2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+        <div class="flex text-yellow-400">
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+        </div>
+
+        <p class="text-gray-600 mb-4">Gostaria de Parabenizar pelo atendimento, entrega super rápida fiz o pedido
+          umas 12:00 e duas horas depois já foi entregue, qualidade muito boa , chegou tudo certinho obrigada a
+          vendedora Yara que foi super atenciosa 🙏👍</p>
+        <div class="flex items-center">
+          <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+            <span class="text-blue-600 font-bold">R</span>
+          </div>
+          <div>
+            <h5 class="font-semibold">Rosimeire Paulino</h5>
+            <p class="text-sm text-gray-500">06/08/2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card bg-white p-6 rounded-xl shadow-md">
+        <div class="flex text-yellow-400">
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+          <span>★</span>
+        </div>
+
+        <p class="text-gray-600 mb-4">Muito boas as camas ótima a qualidade e bom preço</p>
+        <div class="flex items-center">
+          <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+            <span class="text-blue-600 font-bold">C</span>
+          </div>
+          <div>
+            <h5 class="font-semibold">Carlos Roberto</h5>
+            <p class="text-sm text-gray-500">05/08/2025</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    </div>
+    </div>
     </div>
     </div>
   </section>
