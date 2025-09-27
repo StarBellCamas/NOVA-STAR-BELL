@@ -2247,7 +2247,7 @@
                 <span>★</span>
               </div>
             </div>
-            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar a cabeceira queen.')"
+            <button onclick="openWhatsApp('Olá vim do site e gostaria de comprar o colchão D20 de solteiro.')"
               class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
               Comprar Agora <br>
             </button>
@@ -2640,7 +2640,7 @@ Deus abençoe 🙏 muito obrigado</p>
     </div>
   </footer>
   <!-- Botão flutuante do WhatsApp -->
-  <button onclick="openWhatsApp('Olá! Gostaria de saber mais sobre seus produtos.')"
+  <button onclick="openWhatsApp('Olá! Vim pelo site e gostaria de saber mais sobre as camas!')"
     class="floating-whatsapp whatsapp-btn w-16 h-16 rounded-full flex items-center justify-center shadow-lg"> <span
       class="text-3xl">📱</span>
   </button>
@@ -2649,11 +2649,13 @@ Deus abençoe 🙏 muito obrigado</p>
       document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
     }
 
-    const phone = '551920800588'; // Substitua com seu número
-    const encodedMessage = encodeURIComponent("Olá! Gostaria de saber mais sobre suas camas.");
-    function openWhatsApp(msg) {
-      const url = `https://wa.me/${phone}?text=${encodedMessage}`;
-      window.open(url, '_blank');
+   function openWhatsApp(msg) {
+  const phone = '551920800588'; // Seu número
+  const encodedMessage = encodeURIComponent(msg);
+  const url = `https://wa.me/${phone}?text=${encodedMessage}`;
+  window.open(url, '_blank');
+}
+
     }
 
     (function () {
